@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GYM Site</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <style>
+      header {
+        position: sticky;
+        top: 0px;
+        background-color: white;
+        padding: 10px;
+      }
+      .head {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .brand-title {
+        font-size: 40px;
+        font-weight: bold;
+        color: rgb(92, 92, 92);
+      }
+      .nav-item {
+        margin-top: 19px;
+        font-weight: bold;
+      }
+      .item {
+        padding-left: 30px;
+      }
+      .btn {
+        margin-top: 19px;
+        /* word-spacing: 8px; */
+      }
+      .btn-get {
+        padding: 10px;
+        background-color: green;
+        border-radius: 20px;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 14px;
+      }
+      .btn-login {
+        padding: 10px;
+        background-color: green;
+        border-radius: 20px;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      main {
+        margin-top: 10px;
+      }
+      .poster {
+        background-image: url(./img/background2.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+
+        /* border: 2px solid black; */
+        /* margin-top: 30px; */
+      }
+      .p1 {
+        margin-left: -35px;
+      }
+      .p2 {
+        margin-left: -20px;
+      }
+      .title {
+        font-weight: bold;
+        font-size: 40px;
+      }
+      .description {
+        margin-left: 75px;
+
+        line-height: 25px;
+      }
+      .content-2 {
+        display: grid;
+        grid-template-columns: 4fr 6fr;
+        column-gap: 4px;
+        margin-top: 40px;
+      }
+      .item-1 {
+        font-size: 30px;
+        text-align: center;
+        color: orange;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      .item-2 {
+        padding-left: 120px;
+        padding-right: 100px;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: 4fr 4fr 4fr;
+        margin-top: 50px;
+        gap: 10px;
+        /* border: 1px solid black; */
+      }
+      .card {
+        text-align: center;
+      }
+      .card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        transition: 2s;
+      }
+      .card-img {
+        padding-top: 35px;
+      }
+
+      .process {
+        margin-top: 50px;
+      }
+      .login {
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+        gap: 5px;
+        padding-left: 50px;
+      }
+      .content {
+        /* text-align: center; */
+        padding-top: 170px;
+      }
+      .content h1 {
+        color: orange;
+        font-size: 30px;
+      }
+      .login-img {
+        width: 400px;
+        height: 400px;
+      }
+      .login-img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        transition: 2s;
+      }
+      .login-1 {
+        display: grid;
+        grid-template-columns: 7fr 5fr;
+        margin-top: 20px;
+      }
+      .content-1 {
+        padding-top: 170px;
+        padding-left: 150px;
+      }
+      .content-1 h1 {
+        color: orange;
+        font-size: 30px;
+      }
+      footer {
+        /* border: 1px solid black; */
+        /* height: 450px; */
+        padding-left: 130px;
+        margin-top: 90px;
+      }
+      .footer-content {
+        display: grid;
+        grid-template-columns: 4fr 4fr 4fr;
+        margin-top: 30px;
+      }
+      .footer-title {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .footer-description {
+        /* border: 1px solid red; */
+        height: 150px;
+        width: 400px;
+        background-color: rgb(182, 182, 190);
+        text-align: center;
+        border-radius: 10px;
+      }
+      .footer-description p {
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      .footer-title span {
+        color: red;
+      }
+      .bi-star-fill {
+        color: gold;
+      }
+      .faqs {
+        margin-right: 130px;
+      }
+     
+      .questions {
+        display: flex;
+        justify-content: space-between;
+      }
+      .bi-caret-down-fill {
+        margin-top: 25px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="head">
+        <div class="brand-title"><a href="">Gym_fluencer</a></div>
+        <div class="nav-item">
+          <span class="item"><a href="">Features</a></span>
+          <span class="item"
+            ><a href="">
+              Diet Plan <span class="bi bi-caret-down-fill"></span></a
+          ></span>
+          <span class="item"
+            ><a href="">
+              Workout Plan <span class="bi bi-caret-down-fill"></span></a
+          ></span>
+          <span class="item"><a href="">Blog</a></span>
+          <span class="item"><a href="">FAQs</a></span>
+          <span class="item"><a href="">Contact Us</a></span>
+        </div>
+        <div class="btn">
+          <span class="btn-get"><a href="">Get Started</a></span>
+          <span class="btn-login"><a href="">Login</a></span>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <main class="poster">
+        <div class="content">
+          <h1 class="title">Track Your Fitness Journey</h1>
+          <div class="description">
+            <p>
+              Discover the ultimate fitness companion with <br />
+              <span class="p1">
+                GymFluencer. Effortlessly log your workouts, count reps,</span
+              >
+              <br />
+              <span class="p2"
+                >and track calories burned stay motivated and achieve</span
+              >
+              <br />
+              <span>your goals with our user-friendly interface.</span>
+            </p>
+          </div>
+        </div>
+      </main>
+      <div class="content-2">
+        <div class="item-1">Discover Our App's Key Feature</div>
+        <div class="item-2">
+          GymFluencer is your ultimate fitness companion designed to help you
+          track your workouts with ease. Our application allow you to log
+          exercises , count reps and calculate calories burned , all through a
+          user-friendly interface. whether you are beginner or a seasoned
+          athlete , our app will keep you motivated and on track.
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div>
+            <img src="./img/card-1.jpeg" alt="" />
+          </div>
+          <div>
+            <h1>Effortless Workout Logging</h1>
+            <p>
+              Easily log your workouts and monitor your progress over time with
+              <br />
+              our intuitive logging feature. Stay organized and track your
+              fitness <br />
+              journey with precision.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="./img/card-2.jpeg" alt="" />
+          </div>
+          <div>
+            <h1>Accurate Rep Counting</h1>
+            <p>
+              Count your reps accurately with our app, ensuring each workouts is
+              <br />
+              tracked effectively. Perfect for maintaining consistency and
+              improving <br />
+              your performance.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <img src="./img/card-3.jpeg" alt="" />
+          </div>
+          <div>
+            <h1>Calorie Calculation Made Easy</h1>
+            <p>
+              Calculate calories burned during your workouts to help manage your
+              <br />fitness goals. Over app provides precise data to keep you
+              informed <br />
+              and motivated.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <img src="./img/card-4.jpeg" alt="" />
+          </div>
+          <div>
+            <h1>personalized workout plan</h1>
+            <p>
+              An AI-powered personalized workout plan adopts exercises to your
+              <br />
+              fitness level, goals and progress, helping you stay motivated and
+              <br />
+              achieve result faster.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="./img/card-5.jpeg" height="170px" alt="" />
+          </div>
+          <div>
+            <h1>personalized Diet plan</h1>
+            <p>
+              An AI-diet plan customize meals to your health goals ,
+              preferences, <br />
+              and lifestyle, offering tailored , nutritious suggestion to
+              support <br />
+              optimal wellness.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="process">
+        <div class="login">
+          <div class="login-img">
+            <img src="./img/log-in.jpg" width="450px" height="450px" alt="" />
+          </div>
+          <div class="content">
+            <h1>Step 1: Click on Get Started</h1>
+            <p>
+              Start by opening the GymFluencer. The intuitive home screen gives
+              you quick <br />
+              access to all features.
+            </p>
+          </div>
+        </div>
+        <div class="login-1">
+          <div class="content-1">
+            <h1>Step 2: Log Your Exercises</h1>
+            <p>
+              Easily log your exercises by selecting from wide range of
+              activities. Track your <br />
+              progress with detailed logs.
+            </p>
+          </div>
+          <div class="login-img">
+            <img src="./img/count.jpeg" width="450px" height="450px" alt="" />
+          </div>
+        </div>
+        <div class="login">
+          <div class="login-img">
+            <img src="./img/counter.jpg" width="450px" height="450px" alt="" />
+          </div>
+          <div class="content">
+            <h1>Step 3: Count your Reps</h1>
+            <p>
+              Count your reps with precision, ensuring every detail in logged.
+              Stay informed on <br />
+              your progress.
+            </p>
+          </div>
+        </div>
+        <div class="login-1">
+          <div class="content-1">
+            <h1>Step 4: Track Your Progress</h1>
+            <p>
+              Review your workout starts and progress over time to stay
+              motivated and reach your <br />fitness goals.
+            </p>
+          </div>
+          <div class="login-img">
+            <img
+              src="./img/track-progress.png"
+              width="450px"
+              height="450px"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="login">
+          <div class="login-img">
+            <img src="./img/review.jpeg" width="450px" height="450px" alt="" />
+          </div>
+          <div class="content">
+            <h1>Step 5: Review Your Progress</h1>
+            <p>
+              Check your workout summaries and progress over time to stay
+              motivated and <br />
+              achieve your fitness goals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-title">what users <span>Say</span></div>
+      <div class="footer-content">
+        <div class="footer-description">
+          <h2>"Best Fitness App!"</h2>
+          <p>
+            GymFluencer has transformed the way I workout. The rep <br />
+            counting feature is a game changer!
+          </p>
+          <span class="bi bi-star-fill"></span>
+          <span class="bi bi-star-fill"></span>
+          <span class="bi bi-star-fill"></span
+          ><span class="bi bi-star-fill"></span
+          ><span class="bi bi-star-fill"></span>
+        </div>
+        <div class="footer-description">
+          <h2>"So Easy to Use!"</h2>
+          <p>
+            I love how user-friendly the app is. Logging workouts has
+            <br />never been easior!
+          </p>
+          <span class="bi bi-star-fill"></span>
+          <span class="bi bi-star-fill"></span>
+          <span class="bi bi-star-fill"></span
+          ><span class="bi bi-star-fill"></span
+          ><span class="bi bi-star-fill"></span>
+        </div>
+        <div class="footer-description">
+          <h2>"Incredible Progress Tracker!"</h2>
+          <p>
+            I've been seen amazing result since using GymFluencer. The <br />
+            process tracking feature keeps me motivated!
+          </p>
+          <span class="bi bi-star-fill"></span>
+          <span class="bi bi-star-fill"></span>
+          <span class="bi bi-star-fill"></span
+          ><span class="bi bi-star-fill"></span
+          ><span class="bi bi-star-fill"></span>
+        </div>
+      </div>
+      <div class="faqs">
+        <h1>FAQs</h1>
+        <p>
+          Find answer to your questions about the GymFluencer application,
+          designed to enhance your fitness journey.
+        </p>
+        <div class="questions">
+          <h3>How do I log my workouts?</h3>
+          <span class="bi bi-caret-down-fill"></span>
+        </div>
+        <hr />
+        <div class="questions">
+          <h3>Can I track my calories burned?</h3>
+          <span class="bi bi-caret-down-fill"></span>
+        </div>
+        <hr />
+        <div class="questions">
+          <h3>Is this application suitable for beginners?</h3>
+          <span class="bi bi-caret-down-fill"></span>
+        </div>
+        <hr />
+        <div class="questions">
+          <h3>What feature dose the application offer?</h3>
+          <span class="bi bi-caret-down-fill"></span>
+        </div>
+        <hr />
+        <div class="questions">
+          <h3>How can I reset my password?</h3>
+          <span class="bi bi-caret-down-fill"></span>
+        </div>
+       
+      </div>
+    </footer>
+  </body>
+</html>
